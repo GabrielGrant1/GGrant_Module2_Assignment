@@ -42,7 +42,7 @@ public class Main {
                 default: System.out.println("That isn't an option, try again");
             }
         } while (!maze.isFinished);
-        maze.getPlayerScore();
+        System.out.println(maze.getPlayerScore());
     }
 }
 

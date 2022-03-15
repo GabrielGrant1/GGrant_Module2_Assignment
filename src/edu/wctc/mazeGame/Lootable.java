@@ -3,7 +3,7 @@ package edu.wctc.mazeGame;
 public interface Lootable
 {
     public default String loot(Player player){
-        //TODO: find a method that contains room lootables
+        //TODO: fix lootable
         return null;
     }
 }
