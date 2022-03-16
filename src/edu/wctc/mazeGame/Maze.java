@@ -14,19 +14,11 @@ public class Maze {
 
     public void Maze(){
         //TODO: fix constructor for rooms
-        Room north = new Room ("kitchen") {
-            @Override
-            public String getDescription() {
-                return "There is a sink, a stove, and an empty counter top in front of you with a window above it";
-            }
-        };
+        Room north = new Kitchen("kitchen");
 
-        Room south = new Room("livingRoom") {
-            @Override
-            public String getDescription() {
-                return "There is chair in the left corner in front of you, and a single light-bulb on a string above you";
-            }
-        };
+        Room south = new LivingRoom("livingRoom");
+
+        Room east = new DiningRoom("dining room");
 
         currentRoom = north;
     }
@@ -51,10 +43,10 @@ public class Maze {
     }
 
     public String lootCurrentRoom(){
+        //TODO: figure out how to call loot on room, figure out how to determine if the room is lootable
         String action = "This room has no loot";
-        //TODO: determine if lootable
         if (true){
-            action = lootCurrentRoom();
+            //action = currentRoom.loot();
         }
         return action;
     }

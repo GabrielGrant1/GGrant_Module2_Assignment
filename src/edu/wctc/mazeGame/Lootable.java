@@ -3,7 +3,9 @@ package edu.wctc.mazeGame;
 public interface Lootable
 {
     public default String loot(Player player){
-        //TODO: fix lootable
-        return null;
+        String item = "canned food";
+        player.addToScore(100);
+        player.addToInventory(item);
+        return item;
     }
 }
